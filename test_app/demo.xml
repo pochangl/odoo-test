@@ -1,0 +1,13 @@
+<odoo>
+    <record model="test_app.first_model" id="model0">
+        <field name="name">Model 0</field>
+        <field name="description">>Model 0's description</field>
+    </record>
+    <record model="test_app.first_model" id="model1">
+        <field name="name">Model 1</field>
+    </record>
+    <record model="test_app.first_model" id="model2">
+        <field name="name">Model 2</field>
+        <field name="description">>Model 2's description</field>
+    </record>
+</odoo>
