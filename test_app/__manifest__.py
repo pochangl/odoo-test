@@ -27,9 +27,12 @@
     'data': [
         # 'security/ir.model.access.csv',
         'templates/first.xml',
+        'views/menu.xml',
+        'views/first_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo.xml',
     ],
+    'application': True,
 }
