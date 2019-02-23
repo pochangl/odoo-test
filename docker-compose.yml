@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+        - 5432:5432
+    restart: always
+    environment:
+        - POSTGRES_USER=odoo
+        - POSTGRES_PASSWORD=odoo
+        - POSTGRES_DB=postgres
+
+  odoo:
+    image: odoo
+    ports:
+        - 8069:8069
+    volumes:
+        - ./addons:/mnt/extra-addons
+    depends_on:
+        - db
+    links:
+        - db
