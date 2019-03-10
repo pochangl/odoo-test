@@ -1,17 +1,58 @@
 <odoo>
+    <record model="ir.actions.act_window" id="first_test_action">
+        <field name="name">First Model</field>
+        <field name="res_model">test_app.first_model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_smiling_face">Create the first course</p>
+        </field>
+    </record>
+    <menuitem id="menu_test_first" name="FirstModel List" parent="menu_test" action="first_test_action" />
+    
+    <record model="ir.ui.view" id="first_model_tree_view">
+        <field name="name">First Model</field>
+        <field name="model">test_app.first_model</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="first model list">
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
     <record model="ir.ui.view" id="first_model_form_view">
         <field name="name">First Model</field>
         <field name="model">test_app.first_model</field>
-        <field name="priority" evval="16" />
+        <field name="priority" eval="16" />
         <field name="arch" type="xml">
             <form string="first model form">
                 <sheet>
                     <group>
                         <field name="name" />
-                        <field name="description" />
+                        
                     </group>
                 </sheet>
+                <notebook>
+                    <page string="Description">
+                        <field name="description" />
+                    </page>
+                    <page string="About">
+                        This is an example of notebook
+                    </page>
+                </notebook>
             </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="first_model_search_view">
+        <field name="name">First Model</field>
+        <field name="model">test_app.first_model</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+            </search>
         </field>
     </record>
 </odoo>
