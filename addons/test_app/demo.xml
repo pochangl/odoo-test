@@ -1,5 +1,5 @@
 <odoo>
-    <!-- record model="test_app.first_model" id="model0">
+    <record model="test_app.first_model" id="model0">
         <field name="name">Model 0</field>
         <field name="description">Model 0's description</field>
     </record>
@@ -9,8 +9,8 @@
     <record model="test_app.first_model" id="model2">
         <field name="name">Model 2</field>
         <field name="description">Model 2's description</field>
-    </record -->
-    <!-- record model="test_app.session_model" id="session2">
+    </record>
+    <record model="test_app.session_model" id="session2">
         <field name="name">First Session</field>
-    </record -->
+    </record>
 </odoo>
